@@ -1,0 +1,24 @@
+.col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+.table-col {
+    border-right: solid 1px grey;
+}
+
+.table-row {
+    border-bottom: solid 1px grey;
+}
+.status{
+    float: right;
+    // margin-right: 2px;
+}
+
+.icon{
+    float: right;
+}
+.row{
+    padding: 0;
+}

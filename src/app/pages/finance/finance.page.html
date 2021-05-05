@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Finance</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label >Check For Remind:</ion-label>
+          <ion-toggle checked color="secondary" size="large" (onChnage)="remindChecked($event,item)"></ion-toggle>
+        </ion-item>
+      </ion-col>
+      <!-- <ion-col size="12">
+        <ion-card class="card-title p-0">
+          <ion-card-header>
+            <ion-card-title>Check For Remind
+              <ion-toggle checked color="secondary" size="large" (onChnage)="remindChecked($event,item)"></ion-toggle>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+          </ion-card-content>
+        </ion-card>
+      </ion-col> -->
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>Rent
+              <!-- <ion-icon class="icon" name="timer-sharp"  size="large" color="primary"></ion-icon> -->
+            </ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="8">
+                <ion-item>
+                  <ion-input  type="date"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="2">
+                <ion-button outline color="tertiary" size="small" >
+                  <ion-label>Notify</ion-label>&nbsp;
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>Saving
+              <!-- <ion-icon class="icon" name="timer-sharp"  size="large" color="primary"></ion-icon> -->
+            </ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="8">
+                <ion-item>
+                  <ion-input  type="date"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="2">
+                <ion-button outline color="tertiary" size="small" >
+                  <ion-label>Notify</ion-label>&nbsp;
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>Maintanance
+              <!-- <ion-icon class="icon" name="timer-sharp"  size="large" color="primary"></ion-icon> -->
+            </ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="8">
+                <ion-item>
+                  <ion-input  type="date"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="2">
+                <ion-button outline color="tertiary" size="small" >
+                  <ion-label>Notify</ion-label>&nbsp;
+                  <ion-icon name="notifications-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">  
+  <ion-fab-button>  
+    <ion-icon name="add"></ion-icon>  
+  </ion-fab-button>  
+</ion-fab> 

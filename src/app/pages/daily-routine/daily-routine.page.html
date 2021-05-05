@@ -1,0 +1,174 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Daily Routine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>WakeUp Time
+              <ion-icon class="icon" name="timer-sharp"  size="large" color="primary"></ion-icon>
+            </ion-card-title>
+            <span>Every Day</span>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="5">
+                <ion-input type="time"></ion-input>
+              </ion-col>
+              <ion-col size="3.5">
+                <ion-select placeholder="Hours"  interface="popover">
+                  <ion-select-option value="5">5</ion-select-option>
+                  <ion-select-option value="8">8</ion-select-option>
+                </ion-select>
+              </ion-col>
+              <ion-col size="3.5" class="status">
+                <ion-chip outline color="tertiary" size="2">
+                  <ion-label>Check</ion-label>&nbsp;
+                  <ion-checkbox class="status" size="small"></ion-checkbox> 
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>Breakfsat
+              <ion-icon name="restaurant" class="icon"  size="large" color="primary"></ion-icon>
+
+            </ion-card-title>
+            <span>Every Day</span>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="5">
+                <ion-input type="time"></ion-input>
+              </ion-col>
+              <ion-col size="3.5">
+                <ion-select placeholder="Hours"  interface="popover">
+                  <ion-select-option value="5">5</ion-select-option>
+                  <ion-select-option value="8">8</ion-select-option>
+                </ion-select>
+              </ion-col>
+              <ion-col size="3.5" class="status">
+                <ion-chip outline color="tertiary" size="2">
+                  <ion-label>Check</ion-label>&nbsp;
+                  <ion-checkbox class="status" size="small" ></ion-checkbox> 
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>Lunch    
+              <ion-icon name="restaurant" class="icon"  size="large" color="primary"></ion-icon>
+            </ion-card-title>
+            <span>Every Day</span>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="5">
+                <ion-input type="time"></ion-input>
+              </ion-col>
+              <ion-col size="3.5">
+                <ion-select placeholder="Hours"  interface="popover">
+                  <ion-select-option value="5">5</ion-select-option>
+                  <ion-select-option value="8">8</ion-select-option>
+                </ion-select>
+              </ion-col>
+              <ion-col size="3.5" class="status">
+                <ion-chip outline color="tertiary" size="2">
+                  <ion-label>Check</ion-label>&nbsp;
+                  <ion-checkbox class="status" size="small" ></ion-checkbox> 
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>Excersize
+              <ion-icon name="walk" class="icon"  size="large" color="primary"></ion-icon>
+            </ion-card-title>
+            <span>Every Day</span>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="5">
+                <ion-input type="time"></ion-input>
+              </ion-col>
+              <ion-col size="3.5">
+                <ion-select placeholder="Hours"  interface="popover">
+                  <ion-select-option value="5">5</ion-select-option>
+                  <ion-select-option value="8">8</ion-select-option>
+                </ion-select>
+              </ion-col>
+              <ion-col size="3.5" class="status">
+                <ion-chip outline color="tertiary" size="2">
+                  <ion-label>Check</ion-label>&nbsp;
+                  <ion-checkbox class="status" size="small" ></ion-checkbox> 
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12">
+        <ion-card class="card">
+          <ion-card-header>
+            <ion-card-title>Reading
+              <ion-icon name="book" class="icon"  size="large" color="primary"></ion-icon>
+            </ion-card-title>
+            <span>Every Day</span>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="5">
+                <ion-input type="time"></ion-input>
+              </ion-col>
+              <ion-col size="3.5">
+                <ion-select placeholder="Hours"  interface="popover">
+                  <ion-select-option value="5">5</ion-select-option>
+                  <ion-select-option value="8">8</ion-select-option>
+                </ion-select>
+              </ion-col>
+              <ion-col size="3.5" class="status">
+                <ion-chip outline color="tertiary" size="2">
+                  <ion-label>Check</ion-label>&nbsp;
+                  <ion-checkbox class="status" size="small" ></ion-checkbox> 
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">  
+  <ion-fab-button>  
+    <ion-icon name="add"></ion-icon>  
+  </ion-fab-button>  
+</ion-fab> 
