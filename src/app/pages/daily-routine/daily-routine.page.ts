@@ -7,7 +7,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./daily-routine.page.scss'],
 })
 export class DailyRoutinePage implements OnInit {
-
+  tab: string = "add";
   constructor(public alertController : AlertController) { }
 
   ngOnInit() {

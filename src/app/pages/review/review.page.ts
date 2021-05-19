@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./review.page.scss'],
 })
 export class ReviewPage implements OnInit {
-
+  tab: string = "15";
   constructor() { }
 
   ngOnInit() {

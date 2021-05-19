@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  userPhone : any;
+  mobileNumber : any={};
   constructor(
     public router: Router
   ) { }
@@ -15,6 +15,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
   sendOTP(){
+    console.log("number-",this.mobileNumber)
     this.router.navigate(['/get-otp']);
   }
 }

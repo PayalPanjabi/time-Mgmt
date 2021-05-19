@@ -11,5 +11,10 @@ export class SocialMediaPage implements OnInit {
 
   ngOnInit() {
   }
+  checkedRemind(){
 
+  }
+  addSpentTimeOnSocialMedia(){
+    
+  }
 }

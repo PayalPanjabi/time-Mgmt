@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./get-otp.page.scss'],
 })
 export class GetOTPPage implements OnInit {
-
+  otp:any;
   constructor(
     public router : Router
   ) { }
@@ -15,7 +15,7 @@ export class GetOTPPage implements OnInit {
   ngOnInit() {
   }
   submit(){
-    console.log("OTP");
+    console.log("OTP",this.otp);
     this.router.navigate(['/registration']);
   }
 }

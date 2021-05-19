@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,26 +7,109 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
+<ion-content fullscreen>
+  <div class="form pt-3">
+    <ion-list lines="none">
+        <ion-item lines="none" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <div class="input_box">
+                    <ion-label mode="md" position="stacked">Full Name</ion-label>
+                    <ion-input mode="md" type="name" placeholder="" [(ngModel)]="user.name"></ion-input>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp">
+          <div class="item_inner d-flex">
+              <div class="icon_box ion-text-start">
+                  <ion-icon class="zmdi zmdi-email"></ion-icon>
+              </div>
+              <div class="input_box">
+                  <ion-label mode="md" position="stacked">Email Address</ion-label>
+                  <ion-input mode="md" type="email" placeholder="" [(ngModel)]="user.email"></ion-input>
+              </div>
+          </div>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col size="6">
+      <ion-item  lines="none" class="animate__animated animate__fadeInUp">
+          <div class="item_inner d-flex">
+              <div class="icon_box ion-text-start">
+                  <ion-icon class="zmdi zmdi-male-female"></ion-icon>
+              </div>
+              <div class="select_box">
+                  <ion-label mode="md" position="stacked">Gender</ion-label>
+                  <ion-select mode="md" placeholder="Select One" [(ngModel)]="user.gender" 
+                  interface="popover">
+                    <ion-select-option value="female">Female</ion-select-option>
+                    <ion-select-option value="male">Male</ion-select-option>
+                    <ion-select-option value="other">Other</ion-select-option>
+                  </ion-select>
+              </div>
+          </div>
+      </ion-item>
+      </ion-col>
+      <ion-col size="6">
+      <ion-item size="6" lines="none" class="animate__animated animate__fadeInUp">
+        <div class="item_inner d-flex">
+            <div class="icon_box ion-text-start">
+                <ion-icon name="calendar"></ion-icon>
+            </div>
+            <div class="input_box">
+                <ion-label mode="md" position="stacked"> DOB</ion-label>
+                <ion-datetime [(ngModel)]="user.DOBdate" type="date"></ion-datetime>
+            </div>
+        </div>
+    </ion-item>
+    </ion-col>
+    </ion-row>
+    <ion-list lines="none">
+      <ion-item lines="none" class="animate__animated animate__fadeInUp">
+          <div class="item_inner d-flex">
+              <div class="icon_box ion-text-start">
+                  <ion-icon name="man"></ion-icon>
+              </div>
+              <div class="input_box">
+                  <ion-label mode="md" position="stacked">Profession</ion-label>
+                  <ion-input mode="md" type="text" placeholder="" [(ngModel)]="user.profession"></ion-input>
+              </div>
+          </div>
+      </ion-item>
+      <ion-item lines="none" class="animate__animated animate__fadeInUp">
+        <div class="item_inner d-flex">
+            <div class="icon_box ion-text-start">
+                <ion-icon name="heart"></ion-icon>
+            </div>
+            <div class="input_box">
+                <ion-label mode="md" position="stacked">Marrital Status</ion-label>
+                <ion-input mode="md" type="text" placeholder="" [(ngModel)]="user.marritalStatus"></ion-input>
+            </div>
+        </div>
+    </ion-item>
+  </ion-list>
+  </div>
+  <!-- <ion-grid>
    
     <ion-row>
       <ion-col size="6">
         <ion-item>
           <ion-label position="floating">Enter First Name</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="user.firstName"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="6">
         <ion-item>
           <ion-label position="floating">Enter Last Name</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="user.lastName"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="12">
         <ion-item>
           <ion-label>Gender</ion-label>
-          <ion-select placeholder="Select One"  interface="popover">
+          <ion-select placeholder="Select One" [(ngModel)]="user.gender" interface="popover">
             <ion-select-option value="female">Female</ion-select-option>
             <ion-select-option value="male">Male</ion-select-option>
           </ion-select>
@@ -35,7 +118,7 @@
       <ion-col size="12">
         <ion-item>
           <ion-label position="floating" > Email ID</ion-label>
-          <ion-input type="email" ></ion-input>
+          <ion-input type="email" [(ngModel)]="user.email"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="6" >
@@ -45,19 +128,19 @@
       </ion-col>
       <ion-col size="6">
         <ion-item>
-          <ion-datetime  type="date"></ion-datetime>
+          <ion-datetime [(ngModel)]="user.DOBdate" type="date"></ion-datetime>
         </ion-item>
       </ion-col>
       <ion-col size="6">
         <ion-item>
           <ion-label position="floating">Profession</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="user.profession"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="6">
         <ion-item>
           <ion-label position="floating"> Marrital Status</ion-label>
-          <ion-input type="text" ></ion-input>
+          <ion-input type="text" [(ngModel)]="user.marritalStatus"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col class="ion-text-center">
@@ -65,5 +148,9 @@
       </ion-col>
      </ion-row>
    
-  </ion-grid>
+  </ion-grid> -->
+  
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-button  expand="block" class="footer-btn" fill="outline" (click)="register()">Continue</ion-button>
+</ion-footer>

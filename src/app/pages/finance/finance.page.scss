@@ -2,3 +2,26 @@ ion-toggle{
  float: right;
  font-size: 20px;
 }
+.cards{
+    background-color:rgb(240, 238, 238);
+    box-shadow: 0px 0px rpx 0px rgb(0 0 0 / 5%);
+
+}
+.icon-notify{
+    background-color: rgb(161, 229, 250);
+    color: white;
+   border: lightslategray;
+   border-radius: 10px;
+}
+.icon-notify ion-icon{
+    margin-top: 40px;
+}
+.img_box img{
+    // min-width: 93px;
+    // width: 93px;
+    height: 103px;
+    border: rgb(19, 17, 17);
+    padding: 0;
+    background-color: darkgray;
+    border-radius: 10px;
+}

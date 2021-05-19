@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -14,29 +14,93 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12">
-        <ion-card class="card">
+        <!-- <ion-item > -->
+         &nbsp; <ion-label color="primary">Work Progress</ion-label>
+         &nbsp; <ion-progress-bar value="0.4"></ion-progress-bar>
+        <!-- </ion-item> -->
+      </ion-col>
+      <ion-col size="12">
+        <ion-item >
+        <ion-input type="text" placeholder="Untitled" [(ngModel)]="toDoListDTO.untitled"></ion-input> 
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-item lines="none" >
+              <ion-label class="label-style">
+                <ion-icon name="timer-outline" size="small"></ion-icon>
+                Date Created
+              </ion-label>
+              <ion-datetime displayFormat="DD mm YYYY HH:m a" placeholder="Select Date" 
+              [(ngModel)]="toDoListDTO.createdDate"></ion-datetime>
+              </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none">
+              <ion-label class="label-style">
+                <ion-icon name="time-outline" size="small"></ion-icon>
+                Hours
+              </ion-label>
+              <ion-select placeholder="Hours" [(ngModel)]="toDoListDTO.hours" interface="popover">
+                <ion-select-option value="5">5 Hours</ion-select-option>
+                <ion-select-option value="8">8 Hours</ion-select-option>
+              </ion-select>
+              </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-list>
+              <ion-item lines="none">
+              <h4>Status</h4></ion-item>
+              <ion-item lines="none">
+                <ion-icon name="caret-down-circle-outline" size="small"></ion-icon>&nbsp;
+                <ion-label class="label-style">Urgent</ion-label>
+                <ion-checkbox  color="danger" [(ngModel)]="toDoListDTO.Urgent"></ion-checkbox>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-icon name="caret-down-circle-outline" size="small"></ion-icon>&nbsp;
+                <ion-label class="label-style">Important</ion-label>
+                <ion-checkbox slot="end" color="success" [(ngModel)]="toDoListDTO.Imp"></ion-checkbox>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-icon name="caret-down-circle-outline" size="small"></ion-icon>&nbsp;
+                <ion-label class="label-style">Urgent And Important</ion-label>
+                <ion-checkbox slot="end" color="warning" [(ngModel)]="toDoListDTO.UrgentAndImp"></ion-checkbox>
+              </ion-item>
+            </ion-list>
+            <!-- <ion-item lines="none" >
+              <ion-label class="label-style">
+                <ion-icon name="caret-down-circle-outline" size="small"></ion-icon>
+                Status
+              </ion-label>
+             
+              <ion-radio slot="start" value="Urgent" [(ngModel)]="toDoListDTO.hours"></ion-radio>
+              <ion-radio slot="start" value="Imp" [(ngModel)]="toDoListDTO.hours"></ion-radio>
+              <ion-radio slot="start" value="U & Imp" ></ion-radio>
+              
+              </ion-item> -->
+          </ion-col>
+        </ion-row>
+       
+          
+        <!-- <ion-card class="card">
           <ion-card-header>
-            <ion-card-title>To Do 1
-              <ion-icon class="icon" name="add-circle"  size="dark" color="secondary"></ion-icon>
-              <ion-button class="icon1" outline color="dark" size="small" >
-                <!-- <ion-label>Notify</ion-label>&nbsp; -->
-                <ion-icon name="notifications-outline"></ion-icon>
-              </ion-button>
+            <ion-card-title>
+              <ion-input type="text" placeholder="Enter To Do 1"></ion-input> 
+           
             </ion-card-title>
           </ion-card-header>
         
           <ion-card-content>
             <ion-row>
-              <ion-col size="5">
-                <ion-input type="time"></ion-input>
+              <ion-col size="4">
+                <ion-datetime displayFormat="HH:mm a" placeholder="Up Time"></ion-datetime>
               </ion-col>
-              <ion-col size="3.5">
+              <ion-col size="4">
                 <ion-select placeholder="Hours"  interface="popover">
-                  <ion-select-option value="5">5</ion-select-option>
-                  <ion-select-option value="8">8</ion-select-option>
+                  <ion-select-option value="5">5 Hours</ion-select-option>
+                  <ion-select-option value="8">8 Hours</ion-select-option>
                 </ion-select>
               </ion-col>
-              <ion-col size="3.5" class="status">
+              <ion-col size="4" class="status">
                 <ion-chip outline color="dark" size="2">
                   <ion-label>Check</ion-label>&nbsp;
                   <ion-checkbox class="status" size="small"></ion-checkbox> 
@@ -63,16 +127,15 @@
             </ion-row>
 
           </ion-card-content>
-        </ion-card>
+        </ion-card> -->
       </ion-col>
       
-      <ion-col size="12">
+      <!-- <ion-col size="12">
         <ion-card class="card">
           <ion-card-header>
             <ion-card-title>To Do 2
               <ion-icon class="icon" name="add-circle"  size="dark" color="secondary"></ion-icon>
               <ion-button class="icon1" outline color="dark" size="small" >
-                <!-- <ion-label>Notify</ion-label>&nbsp; -->
                 <ion-icon name="notifications-outline"></ion-icon>
               </ion-button>
             </ion-card-title>
@@ -80,16 +143,16 @@
         
           <ion-card-content>
             <ion-row>
-              <ion-col size="5">
-                <ion-input type="time"></ion-input>
+              <ion-col size="4">
+                <ion-datetime displayFormat="HH:mm a" placeholder="Up Time"></ion-datetime>
               </ion-col>
-              <ion-col size="3.5">
+              <ion-col size="4">
                 <ion-select placeholder="Hours"  interface="popover">
                   <ion-select-option value="5">5</ion-select-option>
                   <ion-select-option value="8">8</ion-select-option>
                 </ion-select>
               </ion-col>
-              <ion-col size="3.5" class="status">
+              <ion-col size="4" class="status">
                 <ion-chip outline color="dark" size="2">
                   <ion-label>Check</ion-label>&nbsp;
                   <ion-checkbox class="status" size="small"></ion-checkbox> 
@@ -125,7 +188,6 @@
             <ion-card-title>To Do 3
               <ion-icon class="icon" name="add-circle"  size="dark" color="secondary"></ion-icon>
               <ion-button class="icon1" outline color="dark" size="small" >
-                <!-- <ion-label>Notify</ion-label>&nbsp; -->
                 <ion-icon name="notifications-outline"></ion-icon>
               </ion-button>
             </ion-card-title>
@@ -133,16 +195,16 @@
         
           <ion-card-content>
             <ion-row>
-              <ion-col size="5">
-                <ion-input type="time"></ion-input>
+              <ion-col size="4">
+                <ion-datetime displayFormat="HH:mm a" placeholder="Up Time"></ion-datetime>
               </ion-col>
-              <ion-col size="3.5">
+              <ion-col size="4">
                 <ion-select placeholder="Hours"  interface="popover">
                   <ion-select-option value="5">5</ion-select-option>
                   <ion-select-option value="8">8</ion-select-option>
                 </ion-select>
               </ion-col>
-              <ion-col size="3.5" class="status">
+              <ion-col size="4" class="status">
                 <ion-chip outline color="dark" size="2">
                   <ion-label>Check</ion-label>&nbsp;
                   <ion-checkbox class="status" size="small"></ion-checkbox> 
@@ -178,24 +240,23 @@
             <ion-card-title>To Do 4
               <ion-icon class="icon" name="add-circle"  size="dark" color="secondary"></ion-icon>
               <ion-button class="icon1" outline color="dark" size="small" >
-                <!-- <ion-label>Notify</ion-label>&nbsp; -->
-                <ion-icon name="notifications-outline"></ion-icon>
+               <ion-icon name="notifications-outline"></ion-icon>
               </ion-button>
             </ion-card-title>
           </ion-card-header>
         
           <ion-card-content>
             <ion-row>
-              <ion-col size="5">
-                <ion-input type="time"></ion-input>
+              <ion-col size="4">
+                <ion-datetime displayFormat="HH:mm a" placeholder="Up Time"></ion-datetime>
               </ion-col>
-              <ion-col size="3.5">
+              <ion-col size="4">
                 <ion-select placeholder="Hours"  interface="popover">
                   <ion-select-option value="5">5</ion-select-option>
                   <ion-select-option value="8">8</ion-select-option>
                 </ion-select>
               </ion-col>
-              <ion-col size="3.5" class="status">
+              <ion-col size="4" class="status">
                 <ion-chip outline color="dark" size="2">
                   <ion-label>Check</ion-label>&nbsp;
                   <ion-checkbox class="status" size="small"></ion-checkbox> 
@@ -231,24 +292,23 @@
             <ion-card-title>To Do 5
               <ion-icon class="icon" name="add-circle"  size="dark" color="secondary"></ion-icon>
               <ion-button class="icon1" outline color="dark" size="small" >
-                <!-- <ion-label>Notify</ion-label>&nbsp; -->
-                <ion-icon name="notifications-outline"></ion-icon>
+               <ion-icon name="notifications-outline"></ion-icon>
               </ion-button>
             </ion-card-title>
           </ion-card-header>
         
           <ion-card-content>
             <ion-row>
-              <ion-col size="5">
-                <ion-input type="time"></ion-input>
+              <ion-col size="4">
+                <ion-datetime displayFormat="HH:mm a" placeholder="Up Time"></ion-datetime>
               </ion-col>
-              <ion-col size="3.5">
+              <ion-col size="4">
                 <ion-select placeholder="Hours"  interface="popover">
                   <ion-select-option value="5">5</ion-select-option>
                   <ion-select-option value="8">8</ion-select-option>
                 </ion-select>
               </ion-col>
-              <ion-col size="3.5" class="status">
+              <ion-col size="4" class="status">
                 <ion-chip outline color="dark" size="2">
                   <ion-label>Check</ion-label>&nbsp;
                   <ion-checkbox class="status" size="small"></ion-checkbox> 
@@ -276,14 +336,39 @@
 
           </ion-card-content>
         </ion-card>
-      </ion-col>
+      </ion-col> -->
       
     </ion-row>
   </ion-grid>
-  
+ 
 </ion-content>
-<ion-fab vertical="bottom" horizontal="end" slot="fixed">  
+<ion-footer lines="none">
+  <ion-row>
+    <ion-col size="2"></ion-col>
+    <ion-col >
+      <!-- <ion-button class="icon1" outline  size="small" > -->
+        <ion-icon  name="share-outline" (click)="assignTask()"></ion-icon>
+        <!-- <ion-label>Assign</ion-label> -->
+      <!-- </ion-button> -->
+    </ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col >
+      <!-- <ion-button class="icon1" outline size="small" > -->
+        <ion-icon name="notifications-outline" (click)="presentModal()"></ion-icon>
+       <!-- <ion-text> Notify</ion-text> -->
+      <!-- </ion-button> -->
+    </ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col >
+      <ion-icon name="add-circle-outline" (click)="addTODoList()"></ion-icon>
+      <!-- Add -->
+    </ion-col>
+    <ion-col size="2"></ion-col>
+  </ion-row>
+  
+</ion-footer>
+<!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">  
   <ion-fab-button>  
     <ion-icon name="add"></ion-icon>  
   </ion-fab-button>  
-</ion-fab> 
+</ion-fab>  -->

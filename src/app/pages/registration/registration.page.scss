@@ -1,3 +1,10 @@
 ion-button{
     float: right;
    }
+
+   .animate__animated.animate__fadeInUp {
+    &:nth-child(1) {
+        --animate-duration: .15s;
+    }
+   }
+

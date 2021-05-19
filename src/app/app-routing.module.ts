@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   // {
@@ -55,6 +55,14 @@ const routes: Routes = [
   {
     path: 'social-media',
     loadChildren: () => import('./pages/social-media/social-media.module').then( m => m.SocialMediaPageModule)
+  },
+  {
+    path: 'assign-task',
+    loadChildren: () => import('./pages/assign-task/assign-task.module').then( m => m.AssignTaskPageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
   }
 ];
 

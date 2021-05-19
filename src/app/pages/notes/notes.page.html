@@ -1,12 +1,44 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Notes</ion-title>
+    <ion-title >Notes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+   
+    <ion-row>
+      <ion-col size="12">
+      <div>
+        <div class="img_box">
+            <img src="assets/images/time-mgmt-notes.png" height="250"> 
+        </div>
+      </div>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          
+          <ion-label position="floating"><ion-icon name="star"></ion-icon>&nbsp;Title</ion-label>
+          <!-- <ion-textarea [(ngModel)]="data.notes" placeholder="Enter Notes here..."></ion-textarea> -->
+          <ion-input type="text"  [(ngModel)]="data.notesTitle" placeholder="Enter Title here..."></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-label position="floating"><ion-icon name="information-circle"></ion-icon>&nbsp; Notes</ion-label>
+          <ion-textarea [(ngModel)]="data.notes" placeholder="Enter Notes here..."></ion-textarea>
+          <!-- <ion-input type="text"  [(ngModel)]="data.notes" ></ion-input> -->
+        </ion-item>
+      </ion-col>
+      <!-- <ion-col class="ion-text-center btn">
+        <ion-button expand="block" fill="outline" (click)="addNotes()">Add</ion-button>  
+      </ion-col> -->
+    </ion-row>
 
+  </ion-grid>
 </ion-content>
+<ion-footer class="ion-no-border">
+  <ion-button  expand="block" class="footer-btn" fill="outline" (click)="presentActionSheet()">Take Action</ion-button>
+</ion-footer>

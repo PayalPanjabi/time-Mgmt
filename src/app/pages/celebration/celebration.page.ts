@@ -15,4 +15,5 @@ export class CelebrationPage implements OnInit {
   onChange($event) {
     console.log($event);
   }
+  addDate(){}
 }

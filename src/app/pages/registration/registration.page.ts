@@ -7,17 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.page.scss'],
 })
 export class RegistrationPage implements OnInit {
-  user=[
-    {
-      firstName:'',
-      lastName:'',
-      gender:'',
-      email:'',
-      dob:'',
-      profession:'',
-      marritalStatus:''
-    }
-  ];
+ 
+  user:any={}
   constructor(
     public router : Router
   ) { }

@@ -1,0 +1,26 @@
+.logo{
+
+}
+
+.title h1 h2{
+    text-align: center;
+    color: black;
+    text-shadow: rgb(81, 79, 83);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.title h2{
+    color:darkgrey;
+}
+
+.button.btn {
+    --border-radius: 50px;
+    width: fit-content;
+    height: 35px;
+    font-size: .7rem;
+    min-width: 108px;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin: 11px 5px !important;
+}

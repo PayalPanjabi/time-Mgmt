@@ -1,42 +1,43 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-center">Login</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
+<!-- <ion-header>
+  <ion-toolbar lines="none">
+      <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header> -->
 
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col>
-       
-      </ion-col>
-      <ion-col class="mobileNumber">
-        <ion-item>
-          <ion-label position="floating">Enter Mobile Number</ion-label>
-          <ion-input type="number" maxlength=“10” ></ion-input>
+      <ion-col class="title  ion-text-center">
+        <div class="logo ion-text-center">
+          <img src="assets/images/logo1.png" width="200"> 
+        </div>
+          <h1>Time Management</h1>
+          <h2>Login</h2>
+        
+        <ion-item lines="full">
+          <ion-text>+1</ion-text>&nbsp;
+            <ion-input mode="md" type="number" [(ngModel)]="mobileNumber"
+              placeholder="Enter Mobile Number"></ion-input>
+            <ion-button size="small" class="btn" color="secondary" 
+            (click)="sendOTP()">Continue</ion-button>
         </ion-item>
-        <ion-button (click)="sendOTP()">Send OTP</ion-button>
-      </ion-col>
-      <ion-col>
-       
       </ion-col>
     </ion-row>
   </ion-grid>
-    
-
-    <!-- <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        <ion-card-title>Card Title</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </ion-card-content>
-    </ion-card> -->
   
 </ion-content>
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+  <div>
+    <div class="img_box">
+        <img src="assets/images/bg-img.jpg" height="300"> 
+    </div>
+  </div>
+</ion-footer>
